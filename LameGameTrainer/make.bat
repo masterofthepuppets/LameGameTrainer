@@ -1,0 +1,1 @@
+gcc LameGameTrainer.c -o LameGameTrainer.exe -O3
