@@ -245,8 +245,7 @@ CHEAT *load_config(char *config_file) {
 		char *hotkey, *cheat_code;
 		char cheat_string_tmp[290];
 		
-		strncpy(cheat_string_tmp, cheat_string, 290);
-		cheat_string_tmp[strlen(cheat_string_tmp) - 1] = 0;
+		snprintf(cheat_string_tmp, 290, "%s", cheat_string);
 		
 		/* making sure the line is in the configuration format, and storing the hot key and respective cheat code */
 		if ((hotkey = strtok(cheat_string_tmp, "|")) == NULL) {
@@ -272,8 +271,7 @@ CHEAT *load_config(char *config_file) {
 			/* storing hotkey information and their respective cheat_codes to be used later in identifying WM_HOTKEY and sending the respective cheat code to each HOTKEY */
 			cheats[i].hotkey.fsModifiers = hot_key.fsModifiers;
 			cheats[i].hotkey.vkCode = hot_key.vkCode;
-			strncpy(cheats[i].cheat_code, cheat_code, 256);
-			//cheats[i].cheat_code[strlen(cheats[i].cheat_code)] = 0;
+			snprintf(cheats[i].cheat_code, 256, "%s", cheat_code);
 		}
 		i++;
 	}
