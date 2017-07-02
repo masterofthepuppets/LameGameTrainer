@@ -37,8 +37,9 @@ The syntax of the configuration file is simply `HOTKEY|CHEATCODE` with `|` as th
 {PAGEUP}|FIGHTFIGHTFIGHT
 ```
 
-The hot key must be either of the following: one alphanumeric character, one "special" key (e.g RSHIFT/LSHIFT, F10, LBUTTON, ..), one "hold key" (SHIFT, CTRL, WIN or ALT) + one alphanumeric character or one "special key".
-Unfortunately, LameGameTrainer only allows alphanumeric cheat codes currently.
+The hot key must be either of the following: one alphanumeric character, one "special" key (e.g RSHIFT/LSHIFT, F10, LBUTTON, ..) or one "hold key" (SHIFT, CTRL, WIN or ALT) + one alphanumeric character or one "special key".
+
+Unfortunately, LameGameTrainer only allows alphanumeric cheat codes and spaces currently.
 
 ## Examples of accepted and not accepted hot keys:
 
