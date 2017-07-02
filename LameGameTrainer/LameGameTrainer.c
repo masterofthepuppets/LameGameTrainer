@@ -196,7 +196,7 @@ int parse_hotkey(char *hotkey, int stage, HOTKEY *result) {
 int parse_cheatcode(char *hotkey) {
 	int i = 0;
 	while (hotkey[i] != 0) {
-		if (!isalnum(hotkey[i]))
+		if (!isalnum(hotkey[i]) && hotkey[i] != 0x20)
 			return FALSE;
 		i++;
 	}
