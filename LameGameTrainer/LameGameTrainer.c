@@ -209,10 +209,7 @@ void write_config(char *hotkey, char *cheat_code) {
 	char cheat_string[290] = "";
 	
 	/* the delimeter is | */
-	strcat(cheat_string, hotkey);
-	strcat(cheat_string, "|");
-	strcat(cheat_string, cheat_code);
-	strcat(cheat_string, "\n");
+	snprintf(cheat_string, 290, "%s|%s\n", hotkey, cheat_code);
 	
 	if ((config = fopen("LAME_config.conf", "a")) == NULL) {
 		printf("Error opening the config file, check the directory/file has proper permissions.\r\n");
